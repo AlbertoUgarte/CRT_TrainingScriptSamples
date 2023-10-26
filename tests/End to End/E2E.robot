@@ -10,6 +10,7 @@ ${FILE_PATH}         ${CURDIR}${/}..${/}..${/}resources${/}data${/}Test Sample P
 # ${loan_amount}=           25,000
 *** Test Cases ***
 E2E broker flow
+    [Documentation]    Test Upload DOc
     [tags]                  E2E
     Appstate                Home
     Evaluate                random.seed()               random
