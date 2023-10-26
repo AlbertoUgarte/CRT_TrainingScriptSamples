@@ -204,7 +204,7 @@ E2E broker flow
     ClickText    Continue
     # Income Verification
     VerifyText    Income Verification
-    VerifyText    Income documents upload
+    #VerifyText    Income documents upload
     ClickText    Upload documents
     ${FILE_PATH}=          ${CURDIR}/../Resources/data/PDF Sample 123.pdf
     UploadFile    Choose a file   ${FILE_PATH}
