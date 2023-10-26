@@ -4,6 +4,7 @@ Suite Setup                 Setup Browser
 Suite Teardown              End suite
 Resource                    ../../resources/variable.robot
 Library    FakerLibrary
+Library    QVision
 
 *** Variables ***
 ${FILE_PATH}         ${CURDIR}${/}..${/}..${/}resources${/}data${/}Test Sample PDF.pdf
@@ -206,14 +207,20 @@ E2E broker flow
     VerifyText    Income Verification
     #VerifyText    Income documents upload
     ClickText    Upload documents
-    ScrollTo     Upload
+    #ScrollTo     Upload
     #${FILE_PATH}  Set Variable          ${CURDIR}${/}..${/}..${/}resources${/}data${/}Test Sample PDF.pdf
-    ClickElement                 //div[@class\=“upload-action position-bottom-left”]/child::label/child::span/child::span/child::span/img 
-    UploadFile    //div[@class\=“upload-action position-bottom-left”]   ${FILE_PATH} 
+    
+    #ClickElement                 //div[@class\=“upload-action position-bottom-left”]/child::label/child::span/child::span[2]
+
+    #ClickElement                 //div[@class\=“upload-action position-bottom-left”]/child::label/child::span/child::span/child::span/child::span 
+    #UploadFile    //div[@class\=“upload-action position-bottom-left”]   ${FILE_PATH} 
    #UploadFile    Add Files   filename=../../resources/common.robot
-    
-   
-    
+   ClickText      Add Files
+    QVision.ClickText           suite
+#    UseModal       On
+#    ClickText      suite        recognition_mode=vision
+#    UploadFile     Add Files     ${FILE_PATH}  anchor=upload
+
 
 
 
