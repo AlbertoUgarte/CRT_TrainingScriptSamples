@@ -207,7 +207,8 @@ E2E broker flow
     #VerifyText    Income documents upload
     ClickText    Upload documents
     #${FILE_PATH}  Set Variable          ${CURDIR}${/}..${/}..${/}resources${/}data${/}Test Sample PDF.pdf
-    UploadFile    Add Files   ${FILE_PATH} 
+    ClickElement                 //div[@class\=“upload-action position-bottom-left”]/child::label/child::span/child::span/child::span/img 
+    UploadFile    //div[@class\=“upload-action position-bottom-left”]   ${FILE_PATH} 
    #UploadFile    Add Files   filename=../../resources/common.robot
     
    
