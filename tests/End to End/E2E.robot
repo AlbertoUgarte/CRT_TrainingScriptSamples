@@ -203,23 +203,24 @@ E2E broker flow
     ClickText    NSW
     TypeText    Card Number *    3254342534
     ClickText    Continue
-    # Income Verification
     VerifyText    Income Verification
     #VerifyText    Income documents upload
     ClickText    Upload documents
+    UploadFile    Add Files   ${FILE_PATH} 
+
     #ScrollTo     Upload
     #${FILE_PATH}  Set Variable          ${CURDIR}${/}..${/}..${/}resources${/}data${/}Test Sample PDF.pdf
-    
     #ClickElement                 //div[@class\=“upload-action position-bottom-left”]/child::label/child::span/child::span[2]
-
     #ClickElement                 //div[@class\=“upload-action position-bottom-left”]/child::label/child::span/child::span/child::span/child::span 
     #UploadFile    //div[@class\=“upload-action position-bottom-left”]   ${FILE_PATH} 
-   #UploadFile    Add Files   filename=../../resources/common.robot
+
    ClickText      Add Files
-    QVision.ClickText           suite
-#    UseModal       On
-#    ClickText      suite        recognition_mode=vision
-#    UploadFile     Add Files     ${FILE_PATH}  anchor=upload
+    QVision.ClickText     Services                       
+    QVision.DoubleClick           suite 
+        QVision.DoubleClick           resources
+        QVision.DoubleClick           data
+        ${File_Name}    Set Variable    Test Sample PDF.pdf
+        QVision.DoubleClick             ${File_Name}
 
 
 
