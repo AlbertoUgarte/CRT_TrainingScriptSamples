@@ -6,7 +6,7 @@ Resource                    ../../resources/variable.robot
 Library    FakerLibrary
 
 *** Variables ***
-${file_path}=     
+${FILE_PATH}          ${CURDIR}/../resources/data/Test Sample PDF.pdf
 # ${loan_amount}=           25,000
 *** Test Cases ***
 E2E broker flow
