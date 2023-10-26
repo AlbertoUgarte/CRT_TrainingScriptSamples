@@ -2,7 +2,7 @@
 Resource                    ../../resources/common.robot
 Suite Setup                 Setup Browser
 Suite Teardown              End suite
-Resource                    ../resources/variable.robot
+Resource                    ../../resources/variable.robot
 Library    FakerLibrary
 
 *** Variables ***
