@@ -206,6 +206,7 @@ E2E broker flow
     VerifyText    Income Verification
     #VerifyText    Income documents upload
     ClickText    Upload documents
+    ScrollTo     Upload
     #${FILE_PATH}  Set Variable          ${CURDIR}${/}..${/}..${/}resources${/}data${/}Test Sample PDF.pdf
     ClickElement                 //div[@class\=“upload-action position-bottom-left”]/child::label/child::span/child::span/child::span/img 
     UploadFile    //div[@class\=“upload-action position-bottom-left”]   ${FILE_PATH} 
