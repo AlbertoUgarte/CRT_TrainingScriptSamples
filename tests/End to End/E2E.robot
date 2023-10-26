@@ -6,7 +6,7 @@ Resource                    ../../resources/variable.robot
 Library    FakerLibrary
 
 *** Variables ***
-${FILE_PATH}          ${CURDIR}/../resources/data/Test Sample PDF.pdf
+${FILE_PATH}  Set Variable          ${CURDIR}${/}..${/}..${/}resources${/}data${/}Test Sample PDF.pdf
 # ${loan_amount}=           25,000
 *** Test Cases ***
 E2E broker flow
@@ -205,9 +205,8 @@ E2E broker flow
     VerifyText    Income Verification
     #VerifyText    Income documents upload
     ClickText    Upload documents
-    ${FILE_PATH}=          ${CURDIR}/../Resources/data/PDF Sample 123.pdf
-    UploadFile    Choose a file   ${FILE_PATH}
-    ClickText     
+    UploadFile    Add Files   ${FILE_PATH}
+
     
    
     
