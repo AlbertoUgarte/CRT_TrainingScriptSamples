@@ -12,7 +12,6 @@ ${FILE_PATH}          ${CURDIR}/../resources/data/Test Sample PDF.pdf
 E2E broker flow
     [tags]                  E2E
     Appstate                Home
-
     Evaluate                random.seed()               random
     ${exampleFirstName}=    Generate Random String      length=3-9                  chars=abcdefghijklmnopqrstuvwxyz
     ${randomstring}=        Generate Random String      length=3-5                  chars=0123456789
