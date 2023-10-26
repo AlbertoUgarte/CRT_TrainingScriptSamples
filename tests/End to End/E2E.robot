@@ -206,7 +206,7 @@ E2E broker flow
     VerifyText    Income Verification
     #VerifyText    Income documents upload
     ClickText    Upload documents
-    UploadFile    1   ${FILE_PATH}          timeout=2
+    #UploadFile    1   ${FILE_PATH}          timeout=2
 
     #ScrollTo     Upload
     #${FILE_PATH}  Set Variable          ${CURDIR}${/}..${/}..${/}resources${/}data${/}Test Sample PDF.pdf
@@ -214,7 +214,7 @@ E2E broker flow
     #ClickElement                 //div[@class\=“upload-action position-bottom-left”]/child::label/child::span/child::span/child::span/child::span 
     #
     UploadFile    //input[@type\='file']    ${FILE_PATH} 
-
+    VerifyElement                        //div[contains(@class,'upload-action')]//*[@type\='file']         timeout=2
    ClickText      Add Files
     QVision.ClickText     Services                       
     QVision.DoubleClick           suite 
