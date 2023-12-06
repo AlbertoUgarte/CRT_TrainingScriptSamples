@@ -206,7 +206,7 @@ E2E broker flow
     VerifyText    Income Verification
     #VerifyText    Income documents upload
     ClickText    Upload documents
-    #UploadFile    1   ${FILE_PATH}          timeout=2
+    UploadFile    1   ${FILE_PATH}          timeout=2
 
     #ScrollTo     Upload
     #${FILE_PATH}  Set Variable          ${CURDIR}${/}..${/}..${/}resources${/}data${/}Test Sample PDF.pdf
