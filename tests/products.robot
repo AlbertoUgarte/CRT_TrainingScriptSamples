@@ -1,8 +1,10 @@
 *** Settings ***
-Resource                ../resources/common.resource
+Resource                ../resources/common.robot
 Test Teardown           Close All Excel Documents
 Suite Setup             Setup Browser
 Suite Teardown          End Suite
+*** Variables ***
+${excel_worksheet}     ${CURDIR}/../resources/StoredValues.xlsx
 
 *** Test Cases ***
 Verify Products
