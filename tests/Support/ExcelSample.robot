@@ -2,7 +2,7 @@
 
 Documentation           Test suite for CRT starter.
 Library                 QWeb
-Library                 make_excel.py
+Library                 ../../resources/make_excel.py
 Suite Setup             Open Browser    about:blank    chrome
 Suite Teardown          Close All Browsers
 
