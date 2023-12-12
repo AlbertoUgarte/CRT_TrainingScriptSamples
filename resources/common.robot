@@ -1,6 +1,7 @@
 *** Settings ***
 Library                   QForce
 Library                   String
+Library                 ExcelLibrary
 
 *** Variables ***
 ${uatLoginUrl}            https://sympleloans--latuat.sandbox.my.site.com/latitudeBroker/s/login/
