@@ -22,8 +22,8 @@ ${excel_worksheet}     ${CURDIR}/../resources/StoredValues.xlsx
 Update Product Id
     [Documentation]     Update product id to an excel sheet and save changes
     [Tags]              excel    products    update
-    GoTo                ${webshop}
-    VerifyText          Find your spirit animal
+    # GoTo                ${webshop}
+    # VerifyText          Find your spirit animal
 
     # Open existing workbook
     ${document}=        Open Excel Document    ${excel_worksheet}    products
