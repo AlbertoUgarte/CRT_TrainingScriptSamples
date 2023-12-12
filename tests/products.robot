@@ -16,6 +16,7 @@ Update Excel Spreadsheet
     ${document}=           Open Excel Document         ${excel_worksheet}    products
 
     # Create new unique product id
+    Evaluate               random.seed()               random
     ${new_id}=             Generate Random String      length=6              chars=[NUMBERS]
     ${new_id_2}=           Generate Random String      length=6              chars=[NUMBERS]
     ${new_id_3}=           Generate Random String      length=6              chars=[NUMBERS]
