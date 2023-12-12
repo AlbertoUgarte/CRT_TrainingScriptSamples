@@ -50,4 +50,3 @@ Update Product Id
     # Save changes to excel and commit to git
     Save Excel Document  ${excel_worksheet}
     Move File         ${excel_worksheet}          ${OUTPUT DIR}   
-    #Commit And Push     ${excel_worksheet}     ${git_branch}
