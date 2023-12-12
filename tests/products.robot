@@ -32,9 +32,9 @@ Update Excel Spreadsheet
 
     # Write data to the excel
     Write Excel Cell       row_num=2                   col_num=1             value=${new_id}    sheet_name=Sheet
-    Write Excel Cell       row_num=3                   col_num=1             value=${new_id}    sheet_name=Sheet
-    Write Excel Cell       row_num=2                   col_num=2             value=${new_id}    sheet_name=Sheet
-    Write Excel Cell       row_num=3                   col_num=2             value=${new_id}    sheet_name=Sheet
+    Write Excel Cell       row_num=3                   col_num=1             value=${new_id_2}    sheet_name=Sheet
+    Write Excel Cell       row_num=2                   col_num=2             value=${new_id_3}    sheet_name=Sheet
+    Write Excel Cell       row_num=3                   col_num=2             value=${new_id_4}    sheet_name=Sheet
 
     # If you need to Verify the values entered into the Spreadsheet the code below will Check that new value was updated to excel
     # ${updated_id}=       Read Excel Cell             row_num=2             col_num=2          sheet_name=Sheet
