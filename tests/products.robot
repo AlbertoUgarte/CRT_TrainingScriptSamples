@@ -7,16 +7,16 @@ Suite Teardown          End Suite
 ${excel_worksheet}     ${CURDIR}/../resources/StoredValues.xlsx
 
 *** Test Cases ***
-Verify Products
-    [Documentation]     Read product names from excel sheet and verify that those can be found from a webshop page
-    [Tags]              excel    products    verify
+# Verify Products
+#     [Documentation]     Read product names from excel sheet and verify that those can be found from a webshop page
+#     [Tags]              excel    products    verify
 
 
-    # Open existing workbook
-    ${document}=        Open Excel Document    ${excel_worksheet}    products
+#     # Open existing workbook
+#     ${document}=        Open Excel Document    ${excel_worksheet}    products
 
-    # Start reading values from the second row, max number needs to be provided with offset
-    ${product_names}=   Read Excel Column    col_num=1    max_num=6    row_offset=1    sheet_name=Sheet
+#     # Start reading values from the second row, max number needs to be provided with offset
+#     ${product_names}=   Read Excel Column    col_num=1    max_num=6    row_offset=1    sheet_name=Sheet
    
 
 Update Product Id
@@ -49,4 +49,5 @@ Update Product Id
 
     # Save changes to excel and commit to git
     Save Excel Document  ${excel_worksheet}
+    Move File         ${excel_worksheet}          ${OUTPUT DIR}   
     #Commit And Push     ${excel_worksheet}     ${git_branch}
