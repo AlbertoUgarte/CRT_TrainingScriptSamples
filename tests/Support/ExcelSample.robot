@@ -5,7 +5,7 @@ Library                 QWeb
 Library                 ../../resources/make_excel.py
 Suite Setup             Open Browser    about:blank    chrome
 Suite Teardown          Close All Browsers
-
+Resource    ../../resources/common.robot
 
 *** Variables ***
 
