@@ -20,6 +20,7 @@ Update Excel Spreadsheet
     ${new_id_2}=           Generate Random String      length=6              chars=[NUMBERS]
     ${new_id_3}=           Generate Random String      length=6              chars=[NUMBERS]
     ${new_id_4}=           Generate Random String      length=6              chars=[NUMBERS]
+    Log Many               ${new_id}                   ${new_id_2}           ${new_id_3}        ${new_id_4}
 
 
     # If you also need to Read data from the Excel file use this code Below i.e. to Get the current product id
