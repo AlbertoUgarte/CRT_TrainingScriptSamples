@@ -22,10 +22,12 @@ Update Excel Spreadsheet
     ${new_id_3}=           Generate Random String      length=6              chars=[NUMBERS]
     ${new_id_4}=           Generate Random String      length=6              chars=[NUMBERS]
     Log Many               ${new_id}                   ${new_id_2}           ${new_id_3}        ${new_id_4}
-
+    Log To Console     ${new_id}    
 
     # If you also need to Read data from the Excel file use this code Below i.e. to Get the current product id
-    # ${current_id}=       Read Excel Cell             row_num=2             col_num=1          sheet_name=Sheet
+     ${current_id}=       Read Excel Cell             row_num=2             col_num=1          sheet_name=Sheet
+     Log To Console       ${current_id}
+     Should Be Equal As Strings        ${current_id}                        Ordernumber               
     # ${1_current_id}=     Read Excel Cell             row_num=3             col_num=1          sheet_name=Sheet
     # ${2_current_id}=     Read Excel Cell             row_num=2             col_num=2          sheet_name=Sheet
     # ${3_current_id}=     Read Excel Cell             row_num=3             col_num=2          sheet_name=Sheet
