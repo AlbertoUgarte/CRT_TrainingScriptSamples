@@ -4,7 +4,7 @@
 
 *** Keywords ***
 
-Log_in
+Logging
    Set Library Search Order  QForce    QWeb
    SetConfig                 LineBreak                   ${EMPTY}               #\ue000
    SetConfig                 DefaultTimeout              20s                    #sometimes salesforce is slow
