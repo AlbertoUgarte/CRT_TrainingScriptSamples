@@ -8,7 +8,7 @@ Suite Teardown                Close All Browsers
 *** Test Cases ***
 
 Create an Account and Delete using grouped Keywords
-    Log_in
+    Logging
     New Account
     Verify Account
     Delete Account
