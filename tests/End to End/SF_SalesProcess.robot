@@ -48,7 +48,6 @@ Entering A Lead
 
 *** Keywords ***
 Delete Tina
-    [tags]                      Lead                        Git Repo Exercise
     ClickText                   Leads
     VerifyText                  Recently Viewed             timeout=120s
     Wait Until Keyword Succeeds                             1 min                       5 sec                  ClickText          ${FullName}
