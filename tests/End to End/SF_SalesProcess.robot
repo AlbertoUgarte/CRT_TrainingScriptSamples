@@ -42,7 +42,10 @@ Entering A Lead
     VerifyText                  ${FullName}
     VerifyText                  Manager
     VerifyText                  Growmore
+    Delete Tina Smith's Lead
 
+
+*** Keywords ***
 Delete Tina Smith's Lead
     [tags]                      Lead                        Git Repo Exercise
     LaunchApp                   Sales
